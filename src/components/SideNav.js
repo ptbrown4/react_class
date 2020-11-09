@@ -5,9 +5,9 @@ import styled from 'styled-components';
 function SideNav() {
     return(
         <Nav>
-            <h3>
-            SideNav definitely works
-            </h3>
+            <H3>
+                Taking Inventory
+            </H3>
             <Link to="/">Home</Link>
             <Link to="/items">Items</Link>
             <Link to="/alerts">Alerts</Link>
@@ -17,6 +17,9 @@ function SideNav() {
     )
 }
 
+const H3 = styled.h3`
+  font-size: 36px;
+`
 const Nav = styled.nav`
     display: flex;
     flex-direction: column;

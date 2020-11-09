@@ -17,16 +17,16 @@ function MainLayout({ children }) {
     }
     return(
         <ModalContext.Provider value={contextFunctions}>
-        <MainContainer>
+            <MainContainer>
                 <SideNav />
-            <Container>
-                <Header />
-                {children}
-            </Container>
-            {isModalOpen &&
-             <QuickView itemData={itemData} onClose={() => setIsModalOpen(false)} />
-            }
-        </MainContainer>
+                <Container>
+                    <Header />
+                    {children}
+                </Container>
+                {isModalOpen && (
+                <QuickView itemData={itemData} onClose={() => setIsModalOpen(false)} />
+                )}
+            </MainContainer>
         </ModalContext.Provider>
     )
 }
@@ -39,7 +39,7 @@ const MainContainer = styled.main`
 `
 
 const Container = styled.div`
-    border-left: 2px solid 2b486a;
+    border-left: 2px solid #2B486A;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
