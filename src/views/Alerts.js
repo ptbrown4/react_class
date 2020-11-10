@@ -1,10 +1,21 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 import RowContainer from "../components/RowContainer"
-import { alertsData } from "../dataSource"
+import { getData } from "./Users"
+
 
 function Alerts() {
+  const [alertsData, setAlertsData] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await getData("https://fakerapi.it/api/v1/custom?_quantity=11&name=upc&date=date&description=text")
+      setAlertsData(res.data)
+    }
+    fetchData()
+  }, [])
+
   return (
     <>
       {alertsData.map((alert) => (
