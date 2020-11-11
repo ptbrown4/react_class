@@ -20,7 +20,7 @@ function Activities() {
     <>
       {activitiesData.map((activity) => (
         <SmallPadding key={activity.name}>
-          <RowContainer rowData={activity} />
+          <RowContainer rowData={activity} type="activity" />
         </SmallPadding>
       ))}
     </>
