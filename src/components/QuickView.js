@@ -5,7 +5,7 @@ function QuickView({ itemData, onClose }) {
     return(
         <Modal>
             <Details>
-                <CloseButton onClick={onClose}>X</CloseButton>
+                <CloseButton role="button" onClick={onClose}>X</CloseButton>
                 <p>Name: {itemData.name}</p>
                 <p>Amount: {itemData.amount}</p>
                 <p>Get By: {itemData.date}</p>
